@@ -39,18 +39,27 @@
         
         <h2>送信内容</h2>
         <table class="teble">
-        <class="row">
-        <class=col-sm-3>会社名</class>
-        <class=col-sm-9><% name = params['company'] %></class>
-        <class=col-sm-3>氏名</class>
-        <class=col-sm-9><% name = params['name'] %></class>
-        <class=col-sm-3>メール</class>
-        <class=col-sm-9><% name = params['mail'] %></class>
-        <class=col-sm-3>電話番号</class>
-        <class=col-sm-9><% name = params['tel'] %></class>
-        <class=col-sm-3>内容</class>
-        <class=col-sm-9><% name = params['content'] %></class>
-        </class>
+        <div class="row">
+        <div class=col-sm-3>会社名</div>
+        <div class=col-sm-9><%= name = params['company'] %></div>
+         </div>
+         <div class="row">
+        <div class=col-sm-3>氏名</div>
+        <div class=col-sm-9><%= name = params['name'] %></div>
+         </div>
+         <div class="row">
+        <div class=col-sm-3>メール</div>
+        <div class=col-sm-9><%= name = params['mail'] %></div>
+         </div>
+         <div class="row">
+        <div class=col-sm-3>電話番号</div>
+        <div class=col-sm-9><%= name = params['tel'] %></div>
+         </div>
+         <div class="row">
+        <div class=col-sm-3>内容</div>
+        <div class=col-sm-9><%= name = params['content'].gsub(/\r\n|\r|\n/, "<br>") %></div>
+         </div>
+        </div>
         </table>
         <div class="text-center mb-4">
             <!-- 「戻る」ボタンを緑色にする設定を追加 -->
